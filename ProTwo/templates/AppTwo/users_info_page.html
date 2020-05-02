@@ -1,0 +1,23 @@
+{% extends "AppTwo/main_page.html" %}
+  {% block header_block %}
+
+    <h1>User Information:</h1>
+    <div class="User_Table">
+      {% if users %}
+        <ol>
+          {% for element in users %}
+          <li>User Info
+          <ul>
+            <li>First Name: {{element.first_Name}}</li>
+            <li>Last Name: {{element.last_Name}}</li>
+            <li>Email: {{element.email}}</li>
+          </ul>
+          </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No Users Information Found</p>
+      {% endif %}
+    </div>
+
+  {% endblock %}
